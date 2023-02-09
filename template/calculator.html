@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+<!-- style of the calculator -->
+
+{% block head %}
+<link rel="stylesheet" href="static/CSS/styling.css">
+<style>
+    .red {
+        margin: 0% 7% 5% 7%;
+    }
+    .pink{
+        margin-bottom: 2%;
+    }
+</style>
+{% endblock head %}
+
+<!-- body of the calculator -->
+
+{% block body %}
+<div class="red">
+    <h1 class="pink">Calculator</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {% if error %}
+        <div class="alert alert-danger" role="alert">
+            Please Enter The value
+        </div>
+        {% endif %}
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Variable 1</label>
+            <input type="text" value="{{value1}}" class="form-control" name="variable1" id="formGroupExampleInput"
+                placeholder="Enter value of variable 1">
+        </div>
+        <label for="formGroupExampleInput">Operations</label>
+        <select class="form-select" aria-label="Default select example" name="select">
+            <option value="{{op}}">{{op}}</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Variable 2</label>
+            <input type="text" value="{{value2}}" class="form-control" name="variable2" id="formGroupExampleInput2"
+                placeholder="Enter value of variable 2">
+        </div>
+        <button type="submit">Calculate</button>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Output</label>
+            <input type="text" value="{{ans}}" class="form-control" id="formGroupExampleInput">
+        </div>
+    </form>
+
+</div>
+{% endblock body %}

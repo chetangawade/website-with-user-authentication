@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+body{
+    background-color: #f8f9fa;
+}
+hr{
+    margin: 2% 0%;
+}
+.nav1-st{
+    padding: 1% 5%;
+    font-family: 'Dongle', sans-serif;
+}
+
+.li-st{
+    margin: 0% 14px;
+}
+
+/* section */
+.container2{
+    text-align: center;
+    font-family:'Poppins', sans-serif;
+    font-size: xx-large;
+    margin-bottom: 0%;
+}
+.co-cont{
+    color: rgba(255, 0, 0, 0.568);
+}
+.container-img{
+    width: 95vw;
+}
+hr{
+    margin: 2% 0%;
+}
+/* service */
+h3{
+    text-align: center;
+    font-family:'Poppins', sans-serif;
+    font-size: xx-large;
+}
+h4{
+    font-family:'Dancing Script' ,'Poppins', sans-serif;
+    font-size: x-large;
+    text-align: center;
+    margin-bottom: 1%;
+}
+#service{
+    padding: 2%;
+}
+.service1{
+    padding-top: 2%;
+}
+.img-width{
+    margin: auto;
+    width: 325px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2%;
+}
+
+/* web development */
+.web-st3{
+    padding-bottom: 2%;
+}
+.h4-style{
+    font-family: 'Dancing Script', cursive;
+    font-size: xx-large;
+    text-align: center;
+    padding: 2%;
+}
+.web-st{
+    border: 1px solid black;
+    border-radius: 1%;
+    margin: 1% 2%;
+}
+.img-centre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-width1{
+    display: flex;
+    margin: auto;
+    padding: 0%;
+    width: 20rem;
+    border-radius: 2%;
+}
+.web-st1{
+    padding: 2% 0%;
+}
+.web-st2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Our Work */
+.row{
+    margin: 2%;
+}
+.pa-h{
+    margin: 1%;
+}
+.para-style{
+    font-family: 'Dongle', sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+/* contact */
+.contact-st1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+}
+.contact-st{
+    padding: 0% 2%;   
+}
+.footer-contact{
+    text-align: center;
+}
+.footer-text{
+    text-decoration: none;
+}
+/* footer image */
+.footer-image{
+    width: 98vw;
+    margin: auto;
+}

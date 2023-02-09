@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        .box {
+            margin: 0% 24% 0% 24%;
+        }
+
+        hr {
+            visibility: hidden;
+        }
+    </style>
+    <title>Web Development</title>
+</head>
+
+<body class="bg-light">
+
+    <div class="container">
+        <main>
+            <div class="py-5 text-center">
+                <h2>Web Development Registration</h2>
+            </div>
+            <div class="box">
+                <form class="needs-validation" novalidate="" method="POST" action="/sign_up">
+                    {% csrf_token %}
+                    <div class="row g-3">
+                        <!-- logic for first name -->
+                        <div class="col-sm-6">
+                            <label for="firstName" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required=""
+                            name="first_name">
+                            <div class="invalid-feedback">
+                                Valid first name is required.
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="lastName" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required=""
+                            name="last_name">
+                            <div class="invalid-feedback">
+                                Valid last name is required.
+                            </div>
+                        </div>
+                        {% if first_name %}
+                        <div class="alert alert-danger" role="alert">
+                            Enter Your first name and last name !
+                        </div>
+                        {% endif %}
+
+                        <!-- logic for Username -->
+                        <div class="col-12">
+                            <label for="username" class="form-label">Username</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text">@</span>
+                                <input type="text" class="form-control" id="username" placeholder="Username" required=""
+                                name="username">
+                                <div class="invalid-feedback">
+                                    Your username is required.
+                                </div>
+                            </div>
+                        </div>
+                        {% if Username %}
+                        <div class="alert alert-danger" role="alert">
+                            Please Enter Username !
+                        </div>
+                        {% endif %}
+
+                        <!-- logic for creating password -->
+                        <div class="col-12">
+                            <label for="password" class="form-label">Create password</label>
+                            <div class="input-group has-validation">
+                                <input type="password" class="form-control" id="password" placeholder="password@123"
+                                required="" name="password_1">
+                                <div class="invalid-feedback">
+                                    Your username is required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="password" class="form-label">Re-Enter Password</label>
+                            <div class="input-group has-validation">
+                                <input type="password" class="form-control" id="password" placeholder="password@123"
+                                required="" name="password_2">
+                                <div class="invalid-feedback">
+                                    Your username is required.
+                                </div>
+                            </div>
+                        </div>
+                        {% if password %}
+                        <div class="alert alert-danger" role="alert">
+                            Please Enter password !
+                        </div>
+                        {% elif Re_password %}
+                        <div class="alert alert-danger" role="alert">
+                            Password is not matching !
+                        </div>
+                        {% endif %}
+
+                        <div class="col-12">
+                            <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="you@example.com"
+                                name="email">
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address for shipping updates.
+                                </div>
+                            </div>
+                        </div>
+                        {% if email %}
+                        <div class="alert alert-danger" role="alert">
+                            Please Enter Email Id !
+                        </div>
+                        {% elif email_invalid %}
+                        <div class="alert alert-danger" role="alert">
+                            Please Enter Valid Email Id !
+                        </div>
+                        {% endif %}
+
+                    <hr class="my-4">
+
+                    <button class="w-100 btn btn-primary btn-lg" type="submit">Sign Up</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <hr>
+
+    <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="form-validation.js"></script>
+</body>
+
+</html>
